@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: safarsathi-backend
+    env: java
+    plan: free
+    buildCommand: mvn clean package
+    startCommand: java -jar target/safarsathi-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: SPRING_DATA_MONGODB_URI
+        value: mongodb+srv://seamlesstrackers:aryan45637@safarsathi.ps7ngvv.mongodb.net/Rahasathi?retryWrites=true&w=majority
