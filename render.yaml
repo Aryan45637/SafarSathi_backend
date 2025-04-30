@@ -3,7 +3,7 @@ services:
     name: safarsathi-backend
     env: java
     plan: free
-    buildCommand: mvn clean package
+    buildCommand: ./mvnw clean package  # or mvn clean package
     startCommand: java -jar target/safarsathi-0.0.1-SNAPSHOT.jar
     envVars:
       - key: SPRING_DATA_MONGODB_URI
